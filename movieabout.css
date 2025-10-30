@@ -1,0 +1,265 @@
+body {
+  margin: 0;
+  font-family: "Zalando Sans Expanded", sans-serif;
+  background-color: #202020;
+  color: #fff;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  background-color: #414141;
+  height: 64px;
+  padding: 0 20px;
+  gap: 30px;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sitename {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: x-large;
+  margin-right: auto;
+}
+
+.back-button {
+  position: absolute;
+  top: -40px; 
+  left: 0;
+  background-color: #4c4646;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-family: "Zalando Sans Expanded";
+  font-size: 12px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    color: #414141;
+  background-color: #ffffff;
+  transform: scale(1.02);
+}
+
+.movieabout {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+}
+
+.poster {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poster img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.details {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+}
+
+.moviename {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.movierating {
+    margin-top: 0;
+  font-size: 1.1em;
+  color: #f5c518;
+  margin-bottom: 3px;
+}
+
+.overview {
+  font-size: 0.99em;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #ccc;
+  padding-right: 150px;
+}
+
+.genre, .runtime, .tagline {
+  font-size: 0.9em;
+  color: #b0b0b0;
+}
+
+.tagline {
+  font-style: italic;
+  margin-top: 8px;
+  color: #e0e0e0;
+  margin-bottom: 3px;
+}
+
+.ott-section {
+  margin-top: 10px;
+  color: #ccc;
+  font-size: 0.95em;
+}
+
+@media (max-width: 768px) {
+  /* Topbar adjustments */
+  .topbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .sitename {
+    font-size: 1.6em;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  /* Movie layout stacks vertically */
+  .movieabout {
+    flex-direction: column;
+    margin-top: 90px;
+    padding: 20px;
+  }
+
+  .poster img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  .details {
+    width: 100%;
+    padding: 0;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .moviename {
+    font-size: 1.4em;
+  }
+
+  .overview {
+    font-size: 0.9em;
+    line-height: 1.4em;
+    padding: 0 15px;
+  }
+
+  .genre,
+  .runtime,
+  .tagline,
+  .movierating,
+  .ott-section {
+    font-size: 0.85em;
+  }
+
+  .back-button {
+    position: static;
+    margin-top: 15px;
+    font-size: 0.85em;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .topbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .sitename {
+    font-size: 1.8em;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .movieabout {
+    flex-direction: column;
+    margin-top: 90px;
+    padding: 20px;
+  }
+
+  .poster img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  .details {
+    width: 100%;
+    padding: 0;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .moviename {
+    font-size: 1.5em;
+  }
+
+  .overview {
+    font-size: 1.1em;
+    line-height: 1.5em;
+    padding: 0 20px;
+  }
+
+  .genre,
+  .runtime,
+  .tagline,
+  .movierating,
+  .ott-section {
+    font-size: 1em;
+  }
+
+  .back-button {
+    position: static;
+    margin-top: 15px;
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sitename {
+    font-size: 2em;
+  }
+
+  .moviename {
+    font-size: 1.3em;
+  }
+
+  .overview {
+    font-size: 0.9em;
+    padding: 0 10px;
+  }
+
+  .poster img {
+    max-width: 90%;
+  }
+
+  .back-button {
+    padding: 7px 12px;
+    font-size: 0.8em;
+  }
+}
